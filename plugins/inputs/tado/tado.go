@@ -96,7 +96,7 @@ func (plugin *Tado) dumpZone(ctx context.Context, u *gotado.User, h *gotado.Home
 	fields["temperature"] = state.SensorDataPoints.InsideTemperature.Celsius
 	fields["humidity"] = state.SensorDataPoints.Humidity.Percentage
         //fields["mode"] = state.tadoMode
-	fields["heating_power"] = state.activityDataPoints.heatingPower.percentage
+	fields["heating_power"] = state.ActivityDataPoints.HeatingPower.Percentage
 	//fields["link_state"] = state.link.state
 	a.AddCounter("tado", fields, tags)
 }
